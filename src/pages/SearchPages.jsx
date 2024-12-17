@@ -53,21 +53,13 @@ const Indonesia = () => {
                         {newsStatus === 'loading' && <p>Loading articles...</p>}
                         {newsStatus === 'succeeded' && news.map((article, index) => (
                             <div key={index} className="flex flex-col space-y-2">
-
-                                {/* Gambar Berita */}
                                 <img
                                     src={article?.multimedia?.[0]?.url ? `https://www.nytimes.com/${article.multimedia[0].url}` : 'https://www.svgrepo.com/show/508699/landscape-placeholder.svg'}
                                     alt={article.headline.main}
                                     className="w-full h-48 object-cover rounded-lg"
                                 />
-
-                                {/* Judul Berita */}
                                 <h3 className="mb-2 text-xl font-bold text-black">{article.headline.main}</h3>
-                                
-                                {/* Deskripsi Singkat */}
                                 <p className="text-gray-700">{article.snippet}</p>
-                                
-                                {/* Tombol Save dan Unsave */}
                                 <div className="flex space-x-4">
                                     <a
                                         href={article.web_url}
@@ -77,7 +69,6 @@ const Indonesia = () => {
                                     >
                                         Read More...
                                     </a>
-
                                     {!isArticleSaved(article._id) ? (
                                         <button
                                             onClick={() => handleSave(article)}
