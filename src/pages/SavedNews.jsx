@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { removeSavedNews } from '../store/newsSlice'; // Import action
+import { removeSavedNews } from '../store/newsSlice'; 
 
 function SavedNews() {
   const dispatch = useDispatch();
