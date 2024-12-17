@@ -102,7 +102,7 @@ function SavedNews() {
 
       {savedNews.length === 0 && (
         <div className="text-center mt-8">
-          <p className="text-gray-500">Anda belum menyimpan berita apa pun.</p>
+          <p className="text-gray-500">You haven't saved any news yet</p>
         </div>
       )}
     </div>
